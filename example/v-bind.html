@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>v-bind 实例</title>
+  <style>
+      .classA{
+        color:red;
+      }
+      .classB{
+        font-size:30px;
+      }
+     </style>
+  <script src="../assets/js/vue.js"></script>
+
+</head>
+<body>
+  <h1>v-bind 实例</h1>
+  <hr>
+  <div id="app">
+    <img v-bind:src="imgSrc" alt="" width="200px">
+    <div :class="className">1.绑定classA</div>
+   <div :class='{classA:isOk}'>2.绑定classA中的判定</div>
+   <div :class="[classA,classB]">3.绑定class中的数组</div>
+   <div :class="isOk?classA:classB">4.绑定class三元运算符</div>
+   <hr>
+   <div :style="{color:red,fondSize:fond}">5.绑定style</div>
+   <div :style="styleObject">6.绑定对象到style</div>
+   <div>
+     <input type="checkbox" id="isOk" v-model="isOk">
+     <label for="isOk">{{isOk}}</label>
+   </div>
+  </div>
+  
+  
+  <script>
+     var app = new Vue({
+       el:'#app',
+       data:{
+         message:'hello world',
+         imgSrc:'http://img1.imgtn.bdimg.com/it/u=4086069156,2567658383&fm=26&gp=0.jpg',
+         className:'classA',
+         isOk:true,
+         classA:'classA',
+         classB:'classB',
+         red:'red',
+         fond:'24px',
+         styleObject:{
+           color:'green',
+           fontSize:'30px'
+         }
+       }
+     })
+  </script>
+</body>
+</html>

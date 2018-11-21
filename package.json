@@ -1,0 +1,22 @@
+{
+  "name": "vue-base",
+  "version": "1.0.0",
+  "description": "vue demo",
+  "main": "index.js",
+  "directories": {
+    "example": "example"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/smdq/vue-base.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/smdq/vue-base/issues"
+  },
+  "homepage": "https://github.com/smdq/vue-base#readme"
+}
