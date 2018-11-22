@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>component 初识</title>
+  <script src="../assets/js/vue.js"></script>
+</head>
+<body>
+  <h1>component 初识</h1>
+  <hr>
+  <div id="app">
+    <smdq></smdq>
+  </div>
+  <div id="vm">
+   <nsd></nsd>
+  </div>
+  <script>
+    Vue.component('smdq',{
+      template:`
+       <div style="color:red">我是全局smdq组件</div>
+      `
+    })
+     var app = new Vue({
+       el:'#app'
+      
+     })
+
+     var vm = new Vue({
+       el:'#vm',
+       components:{
+         'nsd':{
+           template:`
+       <div style="color:olive">我是局部nsd组件</div>
+      `
+         }
+       }
+     })
+  </script>
+</body>
+</html>

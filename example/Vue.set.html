@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Vue.set 实例</title>
+  <script src="../assets/js/vue.js"></script>
+</head>
+<body>
+  <h1>Vue.set 实例</h1>
+  <hr>
+  <div id="app">
+    {{count}}
+    <ul>
+      <li v-for="item in arr">{{item}}</li>
+    </ul>
+  </div>
+  <p><button onclick="add()">add</button></p>
+  <script>
+    function add(){
+       //Vue.set(outData,'count',2)//点击add 让count值变为2
+       //app.count++;
+      // outData.count++
+      //app.arr[1]="ddd"//如果要改变数组  这样是不可行的要用Vue。setfangfa
+      Vue.set(app.arr,1,'dd') 
+    }
+
+
+    var outData = {
+       count:1,
+      // goods:'car'
+      arr:['aaa','bbb','ccc']
+    }
+     var app = new Vue({
+       el:'#app',
+       data:outData
+     })
+  </script>
+</body>
+</html>
