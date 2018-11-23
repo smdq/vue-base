@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Methods Option 方法选项</title>
+  <script src="../assets/js/vue.js"></script>
+</head>
+<body>
+  <h1>Methods Option 方法选项</h1>
+  <hr>
+  <div id="app">
+    {{a}}
+    <button @click="add">add</button>
+  </div>
+  <script>
+     var app = new Vue({
+       el:'#app',
+       data:{
+        a:1
+       },
+      methods:{
+        add:function(event){
+          this.a++
+          console.log(event)
+        }
+      }
+     })
+  </script>
+</body>
+</html>
